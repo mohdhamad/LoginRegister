@@ -1,0 +1,168 @@
+@charset "UTF-8";
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/ Header Styling /
+header {
+    background: #007bff; / Blue header /
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+header nav {
+    margin-top: 10px;
+}
+header nav a {
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+header nav a:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/ Profile Container /
+main {
+    margin-top: 120px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.profile-container {
+    background: #fff; / White container background /
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #007bff; / Blue accent for section titles /
+    text-align: center;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    width: fit-content;
+}
+
+/ Form Styling /
+form {
+    width: 100%;
+    max-width: 600px;
+}
+form label {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s;
+}
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form input[type="radio"] {
+    margin-right: 5px;
+}
+
+form textarea {
+    resize: none;
+}
+
+form input[type="submit"] {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+form input[type="submit"]:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/ Footer /
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/ Animations /
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/ Responsive Design /
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    form input[type="submit"] {
+        width: 100%;
+    }
+}
